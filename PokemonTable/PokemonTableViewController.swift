@@ -60,7 +60,7 @@ class PokemonTableViewController: UITableViewController {
         cell.pokemonImage.image = UIImage(named: images[indexPath.row])
         cell.pokemonName.text = names[indexPath.row]
         cell.pokemonMaxCP.text = maxCP[indexPath.row]
-        cell.accessoryType = pokemonGot[indexPath.row] ? .checkmark : .detailDisclosureButton
+        cell.accessoryType = pokemonGot[indexPath.row] ? .detailButton : .detailDisclosureButton
         
         return cell
     }
@@ -104,7 +104,7 @@ class PokemonTableViewController: UITableViewController {
             self.pokemonGot[indexPath.row] =
                 (self.pokemonGot[indexPath.row]) ? false : true
             cell?.accessoryType =
-                (self.pokemonGot[indexPath.row]) ? .checkmark : .detailDisclosureButton
+                (self.pokemonGot[indexPath.row]) ? .detailButton : .detailDisclosureButton
         })
         optionMenu.addAction(hadGotAction)
         
